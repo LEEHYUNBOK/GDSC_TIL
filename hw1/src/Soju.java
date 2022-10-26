@@ -1,5 +1,5 @@
 // Alcohol 클래스를 상속 받기 위해 extends를 사용
-public class Chamisul extends Alcohol {
+public class Soju extends Alcohol {
 
     // Chamisul의 가격을 담을 수 있는 price 정수형 변수 입니다.
     // Chamisul 클래스에서만 접근 가능하게 private 접근제어자 사용
@@ -7,7 +7,7 @@ public class Chamisul extends Alcohol {
 
     // Chamisul 클래스 선언 시 정보를 정보를 저장할 수 있도록 하는 Contructor
     // 상속 받은 Alcohol 클래스는 super(...)을 사용하여 정의
-    public Chamisul(String name, int proof, int price) {
+    public Soju(String name, int proof, int price) {
         super(name, proof);
         this.price = price;
     }

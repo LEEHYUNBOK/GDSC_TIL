@@ -1,5 +1,5 @@
 // 술의 정보를 담을 수 있는 Alcohol 클래스 입니다.
-public class Alcohol {
+abstract class Alcohol {
     // 술의 이름을 담을 수 있는 name 문자열 변수 입니다.
     // Alcohol 클래스에서만 접근 가능하게 private 접근제어자 사용
     private String name;
