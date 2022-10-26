@@ -12,9 +12,7 @@
 - Overloading
 </code></pre>
 
----
-
-<details><summary><strong><em><u>피드백</u></em></strong></summary>
+- <h3><em><u>피드백</u></em></h3>
 
 > 1.  현재 Alcohol 클래스가 일반 클래스라서 객체 생성이 가능한 상태인데,
 >     price를 가지고 있지 않은 Alcohol 객체는 사용처를 찾기 힘들 것 같아서
@@ -24,7 +22,5 @@
 >     판매하는 주류가 늘어났을 때 처음처럼.java, 청하.java 처럼 클래스가 과도하게 늘어날 수 있어 보입니다!
 
 수정해서 다시 제출하지는 않으셔도 괜찮아요!
-
-</details>
 
  </details>
