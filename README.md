@@ -21,8 +21,6 @@
 > 2.  Chamisul 클래스 대신, Soju 클래스를 선언하고 필드에 Chamisul이라는 이름을 넣는 건 어떨까 싶습니다.
 >     판매하는 주류가 늘어났을 때 처음처럼.java, 청하.java 처럼 클래스가 과도하게 늘어날 수 있어 보입니다!
 
-수정해서 다시 제출하지는 않으셔도 괜찮아요!
-
  </details>
 
 <details><summary><strong><em>2022-10-26 ~ 11-02 2,3주차</em></strong></summary>
