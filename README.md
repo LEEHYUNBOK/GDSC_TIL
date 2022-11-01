@@ -24,3 +24,23 @@
 수정해서 다시 제출하지는 않으셔도 괜찮아요!
 
  </details>
+
+<details><summary><strong><em>2022-10-26 ~ 11-02 2,3주차</em></strong></summary>
+<h2><strong>주석으로 해당 코드에 대해 설명하기</strong></h2>
+
+<pre><code>
+1. More about JAVA
+2. EOF
+3. 예외 처리
+4. 스레드
+5. 어노테이션 
+6. 제네릭 /2022-10-26
+7. 컬렉션
+8. 람다
+9. 옵셔널
+10. 스트림
+</code></pre>
+
+- <h3><em><u>피드백</u></em></h3>
+
+ </details>
