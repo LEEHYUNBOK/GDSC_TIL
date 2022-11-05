@@ -52,3 +52,4 @@ public @interface CustomAnnotation {
 // ● 괄호안에 매개변수를 선언할 수 없다.
 // ● 예외를 선언할 수 없다.
 // ● 요소의 타입을 매개변수로 정의할 수 없다.
+
