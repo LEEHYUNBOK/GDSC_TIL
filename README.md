@@ -44,6 +44,13 @@
  </details>
 
 <details><summary><strong><em>2022-11-09 4주차</em></strong></summary>
+
+<br>
+
+> [실습 git 주소 ](https://github.com/LEEHYUNBOK/GDSC-BACK-SpringIntroduction-start)
+
+> [과제 git 주소 ](https://github.com/LEEHYUNBOK/GDSC-Server-Assignment-03)
+
 <h2><strong>학생, 과목, 수강 테이블 생성 후 join해서 출력하기</strong></h2>
 
 - 구성
