@@ -1,4 +1,4 @@
-package entity;
+package com.gdsc.jpa.entity;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
