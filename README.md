@@ -188,11 +188,11 @@
 
 - ### Reference
 
-> [RequestBody 어노테이션](https://2ham-s.tistory.com/294).
-> [@Controller와 @RestController 차이](https://mangkyu.tistory.com/49)
-> [[JPA] 양방향 연관관계](https://ict-nroo.tistory.com/122)
-> [JPA의 공통 인터페이스, JpaRepository 의 기능과 구조](https://wonit.tistory.com/469)
-> [Transactional 어노테이션](https://goddaehee.tistory.com/167)
+  - [RequestBody 어노테이션](https://2ham-s.tistory.com/294)
+  - [@Controller와 @RestController 차이](https://mangkyu.tistory.com/49)
+  - [[JPA] 양방향 연관관계](https://ict-nroo.tistory.com/122)
+  - [JPA의 공통 인터페이스, JpaRepository 의 기능과 구조](https://wonit.tistory.com/469)
+  - [Transactional 어노테이션](https://goddaehee.tistory.com/167)
 
 - <h3><em><u>피드백</u></em></h3>
 
