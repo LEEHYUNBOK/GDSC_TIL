@@ -158,41 +158,38 @@
 
 > [과제 git 주소](https://github.com/LEEHYUNBOK/GDSC-Server-Assignment-05.git)
 
-## Description
+- ### Description
 
-- **Controller** _@RequestMapping("/api")_
-  - **Team**
-    - POST "/teams"
-      -> **TeamService** save -> /api/teams/{id} URI 생성
-    - GET "/teams"
-      -> **TeamService** findAll
-    - Get "/teams/{id}"
-      -> **TeamService** findById({id})
-    - PATCH "/teams/{id}"
-      -> **TeamService** updateById({id})
-    - DELETE "/teams/{id}"
-      -> **TeamService** deleteById({id})
-  - **Member**
-    - POST "/teams/{id}/members"
-      -> **MemberService** saveByTeamId({id}) -> // /api/members/{id} URI 생성
-    - GET "/teams/{id}/members"
-      -> **MemberService** findAllByTeamId({id})
-    - Get "Members"
-      -> **MemberService** findAll
-    - GET "/members/{id}"
-      -> **MemberService** findById({id})
-    - PATCH "/members/{id}"
-      -> **MemberService** updateById({id})
-    - DELETE "/members/{id}"
-      -> **MemberService** deleteById({id})
+  - **Controller** _@RequestMapping("/api")_
+    - **Team**
+      - POST "/teams"
+        -> **TeamService** save -> /api/teams/{id} URI 생성
+      - GET "/teams"
+        -> **TeamService** findAll
+      - Get "/teams/{id}"
+        -> **TeamService** findById({id})
+      - PATCH "/teams/{id}"
+        -> **TeamService** updateById({id})
+      - DELETE "/teams/{id}"
+        -> **TeamService** deleteById({id})
+    - **Member**
+      - POST "/teams/{id}/members"
+        -> **MemberService** saveByTeamId({id}) -> // /api/members/{id} URI 생성
+      - GET "/teams/{id}/members"
+        -> **MemberService** findAllByTeamId({id})
+      - Get "Members"
+        -> **MemberService** findAll
+      - GET "/members/{id}"
+        -> **MemberService** findById({id})
+      - PATCH "/members/{id}"
+        -> **MemberService** updateById({id})
+      - DELETE "/members/{id}"
+        -> **MemberService** deleteById({id})
 
-## Reference
+- ### Reference
 
-[RequestBody 어노테이션](https://2ham-s.tistory.com/294).
-[@Controller와 @RestController 차이](https://mangkyu.tistory.com/49)
-[[JPA] 양방향 연관관계](https://ict-nroo.tistory.com/122)
-[JPA의 공통 인터페이스, JpaRepository 의 기능과 구조](https://wonit.tistory.com/469)
-[Transactional 어노테이션](https://goddaehee.tistory.com/167)
+> [RequestBody 어노테이션](https://2ham-s.tistory.com/294).
+> [@Controller와 @RestController 차이](https://mangkyu.tistory.com/49) > [[JPA] 양방향 연관관계](https://ict-nroo.tistory.com/122) > [JPA의 공통 인터페이스, JpaRepository 의 기능과 구조](https://wonit.tistory.com/469) > [Transactional 어노테이션](https://goddaehee.tistory.com/167)
 
 - <h3><em><u>피드백</u></em></h3>
 
