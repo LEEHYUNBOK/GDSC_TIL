@@ -1,5 +1,6 @@
 package com.gdsc.jpa.entity;
 
+import com.gdsc.jpa.dto.MemberDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,4 +29,22 @@ public class Member extends BaseTimeEntity{
     @ManyToOne(targetEntity = Team.class,fetch = FetchType.LAZY)
     @JoinColumn(name = "team_id")
     private Team team;
+
+
+    public MemberDTO toDTO(){
+        return MemberDTO.builder()
+                .id(id)
+                .name(name)
+                .age(age)
+                .createDate(createDate)
+                .lastModifiedDate(lastModifiedDate)
+                .build();
+    }
+
+    public void update(MemberDTO dto) {
+        if(dto.getName() !=null)
+            this.name = dto.getName();
+        if(dto.getAge() != null)
+            this.age = dto.getAge();
+    }
 }
