@@ -7,6 +7,8 @@ import com.gdsc.jpa.entity.Team;
 import com.gdsc.jpa.repository.MemberRepository;
 import com.gdsc.jpa.repository.TeamRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -44,6 +46,14 @@ public class MemberService {
                 .collect(Collectors.toList());
     }
 
+    // PageAble 어노테이션 findAll
+    @Transactional(readOnly = true)
+    public Page<MemberDTO> findAllWithPaging(Pageable pageable){
+        Page<Member> members = memberRepository.findAll(pageable);
+
+        return members.map(Member::toDTO);
+    }
+
     @Transactional(readOnly = true)
     public List<MemberDTO> findAllByTeamId(Long teamId){
         Team team = findEntityByTeamId(teamId);
@@ -53,6 +63,16 @@ public class MemberService {
         return members.stream()
                 .map(Member::toDTO)
                 .collect(Collectors.toList());
+    }
+
+    // PageAble 어노테이션 findAll
+    @Transactional(readOnly = true)
+    public Page<MemberDTO> findAllByTeamIdWithPaging(Long teamId, Pageable pageable){
+        Team team = findEntityByTeamId(teamId);
+
+        Page<Member> members = memberRepository.findAllByTeam(team, pageable);
+
+        return members.map(Member::toDTO);
     }
 
 

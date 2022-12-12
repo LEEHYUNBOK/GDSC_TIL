@@ -6,6 +6,11 @@ import com.gdsc.jpa.entity.Member;
 import com.gdsc.jpa.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,9 +48,32 @@ public class MemberController {
 
     }
 
+//    @GetMapping("/teams/{id}/members")
+//    public ResponseEntity<List<MemberDTO>> findAllByTeamId(@PathVariable("id") Long teamId){
+//        List<MemberDTO> responses = memberService.findAllByTeamId(teamId);
+//
+//        // 만약 팀에 들어간 사람이 없다면
+//        if (responses.isEmpty()) {
+//            // 빈칸 출력
+//            return ResponseEntity
+//                    .noContent()
+//                    .build();
+//        }
+//
+//        return ResponseEntity
+//                .ok(responses);
+//    }
+
+
+    // PageableDefault 어노테이션 : 페이지가 된채로 적을라면 PageableDefault 어노테이션을 통해 페이지 불러오기 가능
+    // @PageableDefault(page = 0, ...) -> 기초 정보를 직접 결정해 준 것 ( 말그대로 defalt )
     @GetMapping("/teams/{id}/members")
-    public ResponseEntity<List<MemberDTO>> findAllByTeamId(@PathVariable("id") Long teamId){
-        List<MemberDTO> responses = memberService.findAllByTeamId(teamId);
+    public ResponseEntity<Page<MemberDTO>> findAllByTeamIdWithPaging(
+            @PathVariable("id") Long teamId,
+            @PageableDefault(page = 0,size = 5,sort = "id",direction = Sort.Direction.ASC)Pageable pageable) {
+
+        Page<MemberDTO> responses = memberService.findAllByTeamIdWithPaging(teamId,pageable);
+
 
         // 만약 팀에 들어간 사람이 없다면
         if (responses.isEmpty()) {
@@ -59,10 +87,11 @@ public class MemberController {
                 .ok(responses);
     }
 
-
-    @GetMapping("/members")
-    public ResponseEntity<List<MemberDTO>> findAll(){
-        List<MemberDTO> responses = memberService.findAll();
+    @GetMapping("/members/default")
+    public ResponseEntity<Page<MemberDTO>> findAllDefault(
+            @PageableDefault(page = 0,size = 10,sort = "id",direction = Sort.Direction.ASC)Pageable pageable
+    ){
+        Page<MemberDTO> responses = memberService.findAllWithPaging(pageable);
 
         if (responses.isEmpty()) {
             return ResponseEntity
@@ -73,6 +102,42 @@ public class MemberController {
         return ResponseEntity
                 .ok(responses);
     }
+
+
+    // PageAble 어노테이션 findAll
+    @GetMapping("/members/pageable")
+    public ResponseEntity<Page<MemberDTO>> findAllWithPaging(
+            Pageable pageable
+    ){
+        Page<MemberDTO> responses = memberService.findAllWithPaging(pageable);
+
+        if (responses.isEmpty()) {
+            return ResponseEntity
+                    .noContent()
+                    .build();
+        }
+
+        return ResponseEntity
+                .ok(responses);
+    }
+
+    @GetMapping("/members/request")
+    public ResponseEntity<Page<MemberDTO>> findAllWithRequest(
+            Pageable pageable
+    ){
+        Page<MemberDTO> responses = memberService.findAllWithPaging(pageable);
+
+        if (responses.isEmpty()) {
+            return ResponseEntity
+                    .noContent()
+                    .build();
+        }
+
+        return ResponseEntity
+                .ok(responses);
+    }
+
+
 
     @GetMapping("/members/{id}")
     public ResponseEntity<MemberDTO> findById(@PathVariable("id") Long id){
