@@ -122,9 +122,10 @@ public class MemberController {
     }
 
     @GetMapping("/members/request")
-    public ResponseEntity<Page<MemberDTO>> findAllWithRequest(
-            Pageable pageable
+    public ResponseEntity<Page<MemberDTO>> findAllRequest(
+            int page, int size, String sort, String sortBy
     ){
+        PageRequest pageable = PageRequest.of(page, size, Sort.Direction.valueOf(sort), sortBy);
         Page<MemberDTO> responses = memberService.findAllWithPaging(pageable);
 
         if (responses.isEmpty()) {
