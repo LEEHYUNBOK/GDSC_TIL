@@ -196,10 +196,45 @@
 
 - <h3><em><u>피드백</u></em></h3>
 
-  > .
+  - <h3><em><u>피드백</u></em></h3>
+
+  ```
+        // /api/teams/id URI 생성
+        // 실수로 api뒤에 teams 안넣었는데 정상적으로 되서 왠지 모르겠음...ㅎㄷㄷㄷㄷ
+        return ResponseEntity.created(URI.create("/api/"+response.getId()))
+                .body(response);
+    ```
+  > created(URI...) 부분은 부가정보일 뿐이라  
+  > /api/saranghaeyo로 입력해도 동작하기는 합니다.
+  >  [#5](https://github.com/GDSC-SKHU/GDSC-Server-Assignment-05/pull/5#discussion_r1034283052)
+  > 위 링크의 댓글 참고하세요!
+
+
+  </details>
+
+<details><summary><strong><em>2022-11-30 7주차</em></strong></summary>
+<h2><strong> JPA Paging </strong></h2>
+
+> [과제 git 주소](https://github.com/LEEHYUNBOK/GDSC-Server-Assignment-06.git)
+
+- ## Description
+
+  - 각 데이터를 request를 통해 받은 뒤 pageable 생성 후 response한 request 형식
+  - pageable에 defualt를 만들어 사용하는 default 형식
+  - pageable을 RequestParam을 통해 받고 response한 pagealbe 형식
+
+- ## Reference
+
+- [Pageable을 이용한 Pagination을 처리하는 다양한 방법](https://tecoble.techcourse.co.kr/post/2021-08-15-pageable/)
+
+- <h3><em><u>피드백</u></em></h3>
+
+  > 좋아요
   > .
 
     </details>
+
+
 
 <!--
 
