@@ -22,7 +22,7 @@ public class SecurityConfig {
         // 왠만하면 끄지말자 대신 csrf 토큰이랑 같이 보내야함
         http.csrf().disable();
 
-        return http.authorizeRequests() // Request에 인증, 인가를 부여하겠다.
+        return http.authorizeRequests() // Request에 인증, 인가(권한 있냐?)를 부여하겠다.
                 .antMatchers("/user/**").hasRole("USER") // /user 로 시작하는 uri는 USER 롤이 있어야 접속가능
                 .antMatchers("/admin/**").hasRole("ADMIN") // /admin으로 작하는 uri는 ADMIN 롤이 있어야 접속가능.
                 .antMatchers().permitAll() // 그 외 요청들은 인증, 인가가 필요없다.
