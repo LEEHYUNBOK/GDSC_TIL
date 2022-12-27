@@ -14,6 +14,9 @@ import org.springframework.web.server.ResponseStatusException;
 public class AuthService implements UserDetailsService {
     private final UserRepository userRepository;
 
+
+    // user가 없으면 NOT_FOUND 예외처리
+    // 있으면 DB에서 username 찾아서 user 정보 return
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return userRepository.findByUsername(username)
