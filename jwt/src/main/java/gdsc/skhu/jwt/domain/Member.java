@@ -14,6 +14,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// UserDetails 구현
 @Getter
 @Builder
 @NoArgsConstructor
@@ -48,21 +49,27 @@ public class Member implements UserDetails {
         return password;
     }
 
+    // 참고 https://zgundam.tistory.com/49
+
+    // 계정 만료 여부, defalt true
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
+    // 계정 잠김 여부, defalt true
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
+    // 계정 패스워드 만료 여부, defalt true
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
+    // 계정 사용 여부, defalt true
     @Override
     public boolean isEnabled() {
         return true;

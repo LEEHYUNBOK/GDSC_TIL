@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
     private final MemberService memberService;
 
+    // /login 페이지 이동
     @PostMapping("/login")
     public TokenDTO login(@RequestBody LoginDTO memberLoginRequestDto) {
         String memberId = memberLoginRequestDto.getMemberId();
