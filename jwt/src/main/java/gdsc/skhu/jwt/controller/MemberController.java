@@ -32,4 +32,15 @@ public class MemberController {
     public ResponseEntity<String> admin() {
         return ResponseEntity.ok("admin");
     }
+
+    @GetMapping("/user")
+    public ResponseEntity<String> user() {
+        return ResponseEntity.ok("user");
+    }
+
+    @GetMapping("/index")
+    public ResponseEntity<String> index() {
+        return ResponseEntity.ok("index");
+    }
+
 }
