@@ -293,7 +293,19 @@
 
     </details>
 
+<details>
+<summary><strong><em>2022-12-28 9주차</em></strong></summary>
+<h2><strong> JWT </strong></h2>
 
+> [과제 git 주소](https://github.com/LEEHYUNBOK/GDSC-Server-Assignment-08)
+## Reference
+- [Spring Security 와 JWT 겉핥기](https://bcp0109.tistory.com/301)
+- [Spring boot를 활용한 JWT 구현](https://velog.io/@seho100/Spring-boot%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-JWT-%EA%B5%AC%ED%98%84)
+- <h3><em><u>피드백</u></em></h3>
+
+  > 👍
+
+</details>
 
 <!--
 
